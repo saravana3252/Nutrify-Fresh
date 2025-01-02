@@ -16,7 +16,7 @@ function Register() {
   function HandleSubmit(event) {
     event.preventDefault();
     console.log(data);
-    fetch('http://localhost:8000/register', {
+    fetch('https://nutrify-fresh.onrender.com/register', {
       method: 'POST',
       body: JSON.stringify(data),
       headers: {

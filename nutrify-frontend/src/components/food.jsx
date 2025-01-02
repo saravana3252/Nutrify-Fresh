@@ -14,7 +14,7 @@ function Food(props) {
   useEffect(() => {
     setFood(props.food);
     setinFood(props.food);
-    console.log(loggedData);
+    // console.log(loggedData);
   }, [props.food]);
 
   function calculateMacros(event) {
@@ -47,7 +47,7 @@ function Food(props) {
       quantity: eatenQuantity,
     };
     console.log(track);
-    fetch('http://localhost:8000/track', {
+    fetch('https://nutrify-fresh.onrender.com/track', {
       method: 'POST',
       body: JSON.stringify(track),
       headers: {

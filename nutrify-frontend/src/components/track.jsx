@@ -42,7 +42,7 @@ function Track() {
 
   useEffect(() => {
     fetch(
-      `http://localhost:8000/track/${
+      `https://nutrify-fresh.onrender.com/track/${
         loggedData.loggedUser.userId
       }/${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`,
       {

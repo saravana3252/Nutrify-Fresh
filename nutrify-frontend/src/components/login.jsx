@@ -18,7 +18,7 @@ function Login() {
 
   function HandleSubmit(event) {
     event.preventDefault();
-    fetch('http://localhost:8000/login', {
+    fetch('https://nutrify-fresh.onrender.com/login', {
       method: 'POST',
       body: JSON.stringify(data),
       headers: {

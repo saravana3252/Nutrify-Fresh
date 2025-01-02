@@ -16,7 +16,7 @@ function Header() {
     <>
       <nav className="navbar navbar-expand-lg mynav">
         <div className="container-fluid mycont">
-          <a class="navbar-brand" href="#">
+          <a className="navbar-brand" href="#">
             NUTRIFY-FRESH
           </a>
           <button
