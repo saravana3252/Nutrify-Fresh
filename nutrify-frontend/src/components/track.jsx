@@ -44,7 +44,7 @@ function Track() {
     fetch(
       `https://nutrify-fresh.onrender.com/track/${
         loggedData.loggedUser.userId
-      }/${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`,
+      }/${date.getFullYear()}-${date.getDate()}-${date.getMonth() + 1}`,
       {
         method: 'GET',
         headers: {
