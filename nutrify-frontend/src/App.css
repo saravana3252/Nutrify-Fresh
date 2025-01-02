@@ -117,6 +117,7 @@
   color: white;
   cursor: pointer;
   position: absolute;
+
 }
 .search-container {
   position: relative;
@@ -176,6 +177,7 @@
 
 .food-h1 {
   color: white;
+  margin-top: 10px;
 }
 
 .diet-container {
@@ -183,7 +185,7 @@
 }
 .items {
   width: 100%;
-  height: 100px;
+  height: auto;
   background-color: rgb(34, 34, 33);
   color: rgb(216, 233, 242);
   padding: 20px;
@@ -205,6 +207,7 @@
 }
 .dismess-h1 {
   color: white;
+  text-align: center;
 }
 
 .form-login {
@@ -225,9 +228,12 @@
   background-color: white;
   color: black !important;
 }
+
+
+
 @media (max-width: 791px) {
   .form {
-    width: 50%;
+    width: 80%;
   }
 
   .btn-register {
@@ -258,6 +264,23 @@
     background-color: white;
     color: black !important;
   }
+  .food-h1 {
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .items {
+    width: 100%;
+    height: auto;
+    background-color: rgb(34, 34, 33);
+    color: rgb(216, 233, 242);
+    padding: 20px;
+  }
+  
+  
+
+  
 }
 @media only screen and (max-width: 992px) and (min-width: 792px) {
   .form {
@@ -278,6 +301,10 @@
     flex-direction: column !important;
     align-items: center !important;
   }
+  .food-container {
+    height: 100vh;
+  }
+  
 }
 @media only screen and (max-width: 1194px) and (min-width: 991px) {
   .form {
@@ -298,6 +325,9 @@
     flex-direction: column !important;
     align-items: center !important;
   }
+  .food-container {
+    height: 100vh;
+  }
 }
 
 @media only screen and (max-width: 1500px) and (min-width: 991px) {
@@ -311,5 +341,8 @@
   .myli {
     width: 20%;
     text-align: center;
+  }
+  .food-container {
+    height: 100vh;
   }
 }
