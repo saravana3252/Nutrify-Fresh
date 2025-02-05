@@ -66,6 +66,7 @@ function Food(props) {
   }
 
   return (
+    <>
     <div className="food-container">
       <div className="img-food">
         <img src={food.imgUrl}></img>
@@ -97,11 +98,13 @@ function Food(props) {
         placeholder="enter quantity"
         onChange={calculateMacros}
       ></input>
-      <br></br>
-      <button className="btn btn-md btn-primary" onClick={trackMacros}>
-        TRACK
-      </button>
     </div>
+    <div className='btn-container'>
+    <button className="btn btn-md btn-primary" onClick={trackMacros}>
+      TRACK
+    </button>
+    </div>
+    </>
   );
 }
 export default Food;

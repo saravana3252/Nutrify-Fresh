@@ -12,12 +12,14 @@ function Login() {
     type: '',
     text: '',
   });
+  const [isLoading,setIsLoading] =useState(false)
   const loggedData = useContext(userContext);
 
   const navigate = useNavigate();
 
   function HandleSubmit(event) {
     event.preventDefault();
+    setIsLoading(true)
     fetch('https://nutrify-fresh.onrender.com/login', {
       method: 'POST',
       body: JSON.stringify(data),
@@ -46,7 +48,9 @@ function Login() {
       })
       .catch((err) => {
         console.log(err);
-      });
+      }).finally(()=>{
+        setIsLoading(false)
+      })
   }
 
   function HandleInput(event) {
@@ -79,7 +83,7 @@ function Login() {
           name="password"
           value={data.password}
         />
-        <button className="btn btn-md btn-primary">LOGIN</button>
+        <button className="btn btn-md btn-primary">{isLoading ? "LOADING..." :"LOGIN"}</button>
         <p className="p-regis">
           Not Registered?{' '}
           <Link className="link-regis" to="/register">

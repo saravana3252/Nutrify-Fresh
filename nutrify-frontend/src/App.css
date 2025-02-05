@@ -6,6 +6,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .form {
   height: 470px;
   width: 30%;
@@ -125,9 +126,9 @@
 
 .food-container {
   height: auto;
-  /* background-color: rgb(34, 0, 255);*/
+  /* background-color: rgb(34, 0, 255); */
   width: 100%;
-  padding: 20px;
+  margin-top: 20px;
   row-gap: 10px;
 }
 .img-food {
@@ -143,6 +144,9 @@
   /* background-color: palevioletred;*/
 }
 .nutri-title {
+  font-weight: 500;
+  /* text-decoration:underline;
+  text-underline-offset: 8px; */
   color: white;
 }
 .nutri-value {
@@ -173,6 +177,11 @@
   border: 1px solid rgb(54, 54, 254);
   cursor: pointer;
   width: 30%;
+}
+
+.btn-container{
+  padding-top: 10px;
+  background-color: black;
 }
 
 .food-h1 {
@@ -228,6 +237,7 @@
   background-color: white;
   color: black !important;
 }
+
 
 
 

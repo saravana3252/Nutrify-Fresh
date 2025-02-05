@@ -13,8 +13,12 @@ function Register() {
     type: '',
     text: '',
   });
+
+  const [isLoading,setIsLoading] =useState(false)
+
   function HandleSubmit(event) {
     event.preventDefault();
+    setIsLoading(true)
     console.log(data);
     fetch('https://nutrify-fresh.onrender.com/register', {
       method: 'POST',
@@ -26,11 +30,16 @@ function Register() {
       .then((response) => response.json())
       .then((messageData) => {
         setMessage({ type: 'success', text: messageData.message });
-      });
+        setTimeout(() => {
+          setMessage({ type: 'invisible-msg', text: 'dummy text' });
+        }, 5000);
+      }).catch((err)=>{
+        console.log(err)
+      }).finally(()=>{
+        setIsLoading(false)
+      })
 
-    setTimeout(() => {
-      setMessage({ type: 'invisible-msg', text: 'dummy text' });
-    }, 5000);
+   
   }
 
   function HandleInput(event) {
@@ -82,8 +91,8 @@ function Register() {
           name="age"
           value={data.age}
         ></input>
-        <button className="btn btn-md btn-primary" onC>
-          REGISTER
+        <button className="btn btn-md btn-primary">
+          {isLoading ? "LOADING" : "REGISTER"}
         </button>
         <p className="p-regis">
           Already Registered ?
