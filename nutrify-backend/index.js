@@ -116,7 +116,7 @@ app.get('/track/:id/:date', verifyToken, (req, res) => {
   let userId = req.params.id;
   let date = new Date(req.params.date);
   let strDate =
-    date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear();
+    date.getMonth() + 1 + '/' + (date.getDate()) + '/' + date.getFullYear();
   console.log(strDate);
 
   trackerModel
@@ -125,9 +125,11 @@ app.get('/track/:id/:date', verifyToken, (req, res) => {
     .populate('food')
     .then((data) => {
       res.send(data);
+      console.log(data)
     })
     .catch((err) => {
       res.send(err);
+      console.log(err)
     });
 });
 
